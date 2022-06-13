@@ -56,7 +56,6 @@ const Shop = () => {
 
   return (
     <div className="shop">
-      <button onClick={() => console.log(items)}>asdasdasd</button>
       {items.map((item) => (
         <Item
           key={item.id}
