@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Router>
       <div className="header">
-        <div className="shop-name">HxH Shop</div>
+        <div className="shop-name">Basketball Shop</div>
         <ul>
           <li>
             <Link to="/">Home</Link>
