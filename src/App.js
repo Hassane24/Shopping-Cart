@@ -47,6 +47,7 @@ function App() {
       id: 7,
     },
   ]);
+  const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (e) => {
     const btnId = parseInt(e.target.attributes.id.textContent);
@@ -63,6 +64,14 @@ function App() {
       newState = newState.toString();
       return newState;
     });
+
+    setCartItems((prevState) => {
+      const cartItem = items.find((item) => item.id === btnId);
+      if (prevState.includes(cartItem)) return prevState;
+      const newState = [...prevState, cartItem];
+      return newState;
+    });
+    console.log(cartItems);
   };
   return (
     <Router>
@@ -73,7 +82,7 @@ function App() {
           path="/shop"
           element={<Shop handleClick={addToCart} items={items} />}
         ></Route>
-        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/cart" element={<Cart itemsInCart={cartItems} />}></Route>
       </Routes>
     </Router>
   );
