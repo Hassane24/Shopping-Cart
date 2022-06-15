@@ -19,7 +19,7 @@ const Cart = (props) => {
           plusHandler={props.plusHandler}
         ></CartItem>
       ))}
-      <div className="total-price">Total Price: {props.totalPrice}</div>
+      <div className="total-price">Total Price: {props.totalPrice}$</div>
       <button className="checkout" onClick={props.checkoutHandler}>
         Checkout
       </button>

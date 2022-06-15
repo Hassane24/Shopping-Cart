@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Shop from "./components/Shop";
@@ -50,6 +50,17 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
+  useEffect(() => {
+    setTotalPrice(() => {
+      let newTotalPrice;
+      cartItems.forEach(
+        (item) => (newTotalPrice = item.price * item.quantityInCart)
+      );
+      return newTotalPrice;
+    });
+    // eslint-disable-next-line
+  }, [items]);
+
   const addToCart = (e) => {
     const btnId = parseInt(e.target.attributes.id.textContent);
     setItems((prevState) => {
@@ -73,27 +84,18 @@ function App() {
       const newState = [...prevState, cartItem];
       return newState;
     });
-
-    setTotalPrice(() => {
-      let newTotalPrice = 0;
-      cartItems.forEach(
-        (item) => (newTotalPrice = item.price * item.quantityInCart)
-      );
-      return newTotalPrice;
-    });
   };
 
   const cartItemInputHandler = (e) => {
     let newQuantityInCart = parseInt(e.target.value);
-    if (isNaN(newQuantityInCart)) newQuantityInCart = 0;
     const inputId = parseInt(e.target.getAttribute("id"));
+    if (isNaN(newQuantityInCart)) newQuantityInCart = 1;
     setItems((prevState) => {
       const newState = [...prevState];
       newState.find((item) => item.id === inputId).quantityInCart =
         newQuantityInCart;
       return newState;
     });
-    console.log(items);
   };
 
   return (
