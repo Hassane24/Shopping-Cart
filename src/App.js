@@ -7,6 +7,8 @@ import Cart from "./components/Cart";
 
 function App() {
   const [itemsInCart, setItemsInCart] = useState("");
+  const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [items, setItems] = useState([
     {
       name: "Molten-GF7-Composite-Basketball",
@@ -47,8 +49,6 @@ function App() {
       id: 7,
     },
   ]);
-  const [cartItems, setCartItems] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     setTotalPrice(() => {
@@ -88,13 +88,21 @@ function App() {
 
   const cartItemInputHandler = (e) => {
     let newQuantityInCart = parseInt(e.target.value);
-    console.log(cartItems);
     const inputId = parseInt(e.target.getAttribute("id"));
     if (isNaN(newQuantityInCart)) newQuantityInCart = 1;
     setItems((prevState) => {
       const newState = [...prevState];
       newState.find((item) => item.id === inputId).quantityInCart =
         newQuantityInCart;
+      return newState;
+    });
+
+    setItemsInCart((prevState) => {
+      let newState = prevState;
+      newState = parseInt(newState);
+      newState = 0;
+      cartItems.forEach((item) => (newState += item.quantityInCart));
+      newState = newState.toString();
       return newState;
     });
   };
