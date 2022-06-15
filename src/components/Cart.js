@@ -7,17 +7,22 @@ const Cart = (props) => {
       {props.itemsInCart.map((item) => (
         <CartItem
           key={item.id}
+          id={item.id}
           imgSrc={item.name}
           imgAlt={item.name}
           type={item.type}
           name={item.name}
           numberItem={item.quantityInCart}
           minusHandler={props.minusHandler}
-          price={item.price}
-          onChangeHandler={props.onChangeHandler}
+          price={item.price * item.quantityInCart}
+          onChangeHandler={props.itemInputHandler}
           plusHandler={props.plusHandler}
         ></CartItem>
       ))}
+      <div className="total-price">Total Price: {props.totalPrice}</div>
+      <button className="checkout" onClick={props.checkoutHandler}>
+        Checkout
+      </button>
     </div>
   );
 };

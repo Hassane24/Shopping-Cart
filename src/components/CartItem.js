@@ -14,13 +14,14 @@ const CartItem = (props) => {
             className="number-item"
             value={props.numberItem}
             onChange={props.onChangeHandler}
+            id={props.id}
           />
           <button className="plus-btn" onClick={props.plusHandler}>
             +
           </button>
         </div>
       </div>
-      <div className="price">{props.price}</div>
+      <div className="price">{props.price}$</div>
     </div>
   );
 };
