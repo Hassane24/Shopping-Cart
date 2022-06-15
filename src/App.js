@@ -52,9 +52,9 @@ function App() {
 
   useEffect(() => {
     setTotalPrice(() => {
-      let newTotalPrice;
+      let newTotalPrice = 0;
       cartItems.forEach(
-        (item) => (newTotalPrice = item.price * item.quantityInCart)
+        (item) => (newTotalPrice += item.price * item.quantityInCart)
       );
       return newTotalPrice;
     });
@@ -88,6 +88,7 @@ function App() {
 
   const cartItemInputHandler = (e) => {
     let newQuantityInCart = parseInt(e.target.value);
+    console.log(cartItems);
     const inputId = parseInt(e.target.getAttribute("id"));
     if (isNaN(newQuantityInCart)) newQuantityInCart = 1;
     setItems((prevState) => {
