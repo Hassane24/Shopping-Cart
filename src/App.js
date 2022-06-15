@@ -61,6 +61,17 @@ function App() {
     // eslint-disable-next-line
   }, [items]);
 
+  useEffect(() => {
+    setItemsInCart((prevState) => {
+      let newState = prevState;
+      newState = parseInt(newState);
+      newState = 0;
+      cartItems.forEach((item) => (newState += item.quantityInCart));
+      newState = newState.toString();
+      return newState;
+    });
+  }, [itemsInCart]);
+
   const addToCart = (e) => {
     const btnId = parseInt(e.target.attributes.id.textContent);
     setItems((prevState) => {
@@ -73,7 +84,7 @@ function App() {
       let newState = prevState;
       if (newState === "") newState = "0";
       newState = parseInt(newState, 10);
-      newState += 1;
+      newState++;
       newState = newState.toString();
       return newState;
     });
@@ -89,7 +100,13 @@ function App() {
   const cartItemInputHandler = (e) => {
     let newQuantityInCart = parseInt(e.target.value);
     const inputId = parseInt(e.target.getAttribute("id"));
-    if (isNaN(newQuantityInCart)) newQuantityInCart = 1;
+    if (isNaN(newQuantityInCart) || newQuantityInCart === 0) {
+      setCartItems((prevState) => {
+        const newState = prevState.filter((item) => item.id !== inputId);
+        return newState;
+      });
+    }
+
     setItems((prevState) => {
       const newState = [...prevState];
       newState.find((item) => item.id === inputId).quantityInCart =
@@ -110,6 +127,14 @@ function App() {
   return (
     <Router>
       <Header cartItems={itemsInCart}></Header>
+      <button
+        onClick={() => {
+          console.log("itemsInCart", itemsInCart);
+          console.log("cartItems", cartItems);
+        }}
+      >
+        States
+      </button>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route
