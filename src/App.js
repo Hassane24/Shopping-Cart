@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
+import "./styles/App.css";
 
 function App() {
   const [itemsInCart, setItemsInCart] = useState("");
@@ -119,14 +120,6 @@ function App() {
   return (
     <Router>
       <Header cartItems={itemsInCart}></Header>
-      <button
-        onClick={() => {
-          console.log("itemsInCart", itemsInCart);
-          console.log("cartItems", cartItems);
-        }}
-      >
-        States
-      </button>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route

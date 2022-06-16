@@ -1,3 +1,4 @@
+import "../styles/CartItem.css";
 const CartItem = (props) => {
   return (
     <div className="cart-item">

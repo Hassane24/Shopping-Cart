@@ -1,4 +1,5 @@
 import CartItem from "./CartItem";
+import "../styles/Cart.css";
 const Cart = (props) => {
   return (
     <div className="shopping-bag">

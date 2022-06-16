@@ -1,3 +1,4 @@
+import "../styles/Shop.css";
 import Item from "./Item";
 const Shop = (props) => {
   const removeDashFromItemName = (string) => string.split("-").join(" ");
