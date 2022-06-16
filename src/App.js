@@ -90,7 +90,8 @@ function App() {
   const cartItemInputHandler = (e) => {
     let newQuantityInCart = parseInt(e.target.value);
     const inputId = parseInt(e.target.getAttribute("id"));
-    if (isNaN(newQuantityInCart) || newQuantityInCart === 0) {
+    if (isNaN(newQuantityInCart)) newQuantityInCart = 0;
+    if (newQuantityInCart === 0) {
       setCartItems((prevState) => {
         const newState = prevState.filter((item) => item.id !== inputId);
         return newState;
