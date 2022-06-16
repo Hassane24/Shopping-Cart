@@ -61,17 +61,6 @@ function App() {
     // eslint-disable-next-line
   }, [items]);
 
-  useEffect(() => {
-    setItemsInCart((prevState) => {
-      let newState = prevState;
-      newState = parseInt(newState);
-      newState = 0;
-      cartItems.forEach((item) => (newState += item.quantityInCart));
-      newState = newState.toString();
-      return newState;
-    });
-  }, [itemsInCart]);
-
   const addToCart = (e) => {
     const btnId = parseInt(e.target.attributes.id.textContent);
     setItems((prevState) => {
@@ -83,7 +72,7 @@ function App() {
     setItemsInCart((prevState) => {
       let newState = prevState;
       if (newState === "") newState = "0";
-      newState = parseInt(newState, 10);
+      newState = parseInt(newState);
       newState++;
       newState = newState.toString();
       return newState;
@@ -114,14 +103,17 @@ function App() {
       return newState;
     });
 
-    setItemsInCart((prevState) => {
-      let newState = prevState;
-      newState = parseInt(newState);
-      newState = 0;
-      cartItems.forEach((item) => (newState += item.quantityInCart));
-      newState = newState.toString();
-      return newState;
-    });
+    setTimeout(() => {
+      setItemsInCart((prevState) => {
+        let newState = prevState;
+        newState = parseInt(newState);
+        newState = 0;
+        cartItems.forEach((item) => (newState += item.quantityInCart));
+        newState = newState.toString();
+        if (newState === "0") newState = "";
+        return newState;
+      });
+    }, 250);
   };
 
   return (
