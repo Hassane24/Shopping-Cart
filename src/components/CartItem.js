@@ -5,7 +5,7 @@ const CartItem = (props) => {
       <img src={require(`../assets/${props.imgSrc}.jpeg`)} alt={props.imgAlt} />
       <div className="info-container">
         <div className="item-type">{props.type}</div>
-        <div className="item-name">{props.name}</div>
+        <div className="cart-item-name">{props.name}</div>
         <div className="plus-minus-input">
           <button className="minus-btn" onClick={props.minusHandler}>
             -
