@@ -20,6 +20,7 @@
   flex-direction: column;
   height: 100%;
   row-gap: 1.2rem;
+  width: 50%;
 }
 
 .item-type,
@@ -46,6 +47,11 @@
   -webkit-appearance: none;
   margin: 0;
 }
+
+.plus-minus-input {
+  width: 100%;
+}
+
 .minus-btn,
 .plus-btn {
   cursor: pointer;
