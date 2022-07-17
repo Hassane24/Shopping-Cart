@@ -77,8 +77,22 @@ function App() {
       );
       return newTotalPrice;
     });
+
+    setItemsInCart((prevState) => {
+      let newState = prevState;
+      newState = sumUpCartItems();
+      return newState;
+    });
     // eslint-disable-next-line
   }, [items]);
+
+  const sumUpCartItems = () => {
+    let sum = 0;
+    items.forEach((item) => (sum += item.quantityInCart));
+    if (sum === 0) sum = "";
+    else sum.toString();
+    return sum;
+  };
 
   const addToCart = (e) => {
     const btnId = parseInt(e.target.attributes.id.textContent);
@@ -133,7 +147,31 @@ function App() {
         if (newState === "0") newState = "";
         return newState;
       });
-    }, 250);
+    }, 100);
+  };
+
+  const minusButtonHandler = (e) => {
+    const itemId = parseInt(
+      e.target.parentNode.childNodes[1].getAttribute("id")
+    );
+    const itemInput = e.target.parentNode.childNodes[1];
+    console.log(itemInput);
+    setItems((prevState) => {
+      const newState = [...prevState];
+      newState.find((item) => item.id === itemId).quantityInCart--;
+      return newState;
+    });
+  };
+
+  const plusButtonHandler = (e) => {
+    const itemId = parseInt(
+      e.target.parentNode.childNodes[1].getAttribute("id")
+    );
+    setItems((prevState) => {
+      const newState = [...prevState];
+      newState.find((item) => item.id === itemId).quantityInCart++;
+      return newState;
+    });
   };
 
   return (
@@ -152,6 +190,8 @@ function App() {
               itemsInCart={cartItems}
               totalPrice={totalPrice}
               itemInputHandler={cartItemInputHandler}
+              plusHandler={plusButtonHandler}
+              minusHandler={minusButtonHandler}
             />
           }
         />

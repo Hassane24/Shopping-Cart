@@ -40,12 +40,17 @@
 
 .plus-minus-input > input {
   width: 33%;
+  text-align: center;
 }
 
 .plus-minus-input > input::-webkit-inner-spin-button,
 .plus-minus-input > input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.plus-minus-input > input {
+  -moz-appearance: textfield;
 }
 
 .plus-minus-input {
