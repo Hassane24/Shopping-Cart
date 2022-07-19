@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f35c5423.css",
-    "main.js": "/static/js/main.6242eb29.js",
+    "main.js": "/static/js/main.3676dc49.js",
     "static/media/Kobe-Bryant-Jersey.jpeg": "/static/media/Kobe-Bryant-Jersey.bd4d6d72e3475c22b59f.jpeg",
     "static/media/home-page.jpg": "/static/media/home-page.a5bfd3da87a56c064a55.jpg",
     "static/media/Molten-GF7-Composite-Basketball.jpeg": "/static/media/Molten-GF7-Composite-Basketball.d533a0578376aa5d911e.jpeg",
@@ -12,10 +12,10 @@
     "static/media/Nike-Air-Jordan-Retro-4.jpeg": "/static/media/Nike-Air-Jordan-Retro-4.d690d1355a88b195c5f3.jpeg",
     "index.html": "/index.html",
     "main.f35c5423.css.map": "/static/css/main.f35c5423.css.map",
-    "main.6242eb29.js.map": "/static/js/main.6242eb29.js.map"
+    "main.3676dc49.js.map": "/static/js/main.3676dc49.js.map"
   },
   "entrypoints": [
     "static/css/main.f35c5423.css",
-    "static/js/main.6242eb29.js"
+    "static/js/main.3676dc49.js"
   ]
 }
