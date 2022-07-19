@@ -6,7 +6,7 @@ const Cart = (props) => {
     return (
       <div>
         <h2 className="bag-h2">Your Bag</h2>
-        No items in the your
+        No items in the your bag
       </div>
     );
   else
