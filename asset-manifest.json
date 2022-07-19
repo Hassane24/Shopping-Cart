@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.f35c5423.css",
-    "main.js": "/static/js/main.3676dc49.js",
-    "static/media/Kobe-Bryant-Jersey.jpeg": "/static/media/Kobe-Bryant-Jersey.bd4d6d72e3475c22b59f.jpeg",
-    "static/media/home-page.jpg": "/static/media/home-page.a5bfd3da87a56c064a55.jpg",
-    "static/media/Molten-GF7-Composite-Basketball.jpeg": "/static/media/Molten-GF7-Composite-Basketball.d533a0578376aa5d911e.jpeg",
-    "static/media/Michael-Jordan-Jersey.jpeg": "/static/media/Michael-Jordan-Jersey.66caac099841e549ebab.jpeg",
-    "static/media/Wilson-Evolution-Indoor-Game-Basketball.jpeg": "/static/media/Wilson-Evolution-Indoor-Game-Basketball.b5dda26d48fa09732f5b.jpeg",
-    "static/media/Basketball-Hoop-Set-For-Kids.jpeg": "/static/media/Basketball-Hoop-Set-For-Kids.19a98494c19356d1ec58.jpeg",
-    "static/media/Kobe-11-Elite-Last-Emperor.jpeg": "/static/media/Kobe-11-Elite-Last-Emperor.11364e84e493f146b7e7.jpeg",
-    "static/media/Nike-Air-Jordan-Retro-4.jpeg": "/static/media/Nike-Air-Jordan-Retro-4.d690d1355a88b195c5f3.jpeg",
-    "index.html": "/index.html",
-    "main.f35c5423.css.map": "/static/css/main.f35c5423.css.map",
-    "main.3676dc49.js.map": "/static/js/main.3676dc49.js.map"
+    "main.css": "/Shopping-Cart/static/css/main.f35c5423.css",
+    "main.js": "/Shopping-Cart/static/js/main.3feae586.js",
+    "static/media/Kobe-Bryant-Jersey.jpeg": "/Shopping-Cart/static/media/Kobe-Bryant-Jersey.bd4d6d72e3475c22b59f.jpeg",
+    "static/media/home-page.jpg": "/Shopping-Cart/static/media/home-page.a5bfd3da87a56c064a55.jpg",
+    "static/media/Molten-GF7-Composite-Basketball.jpeg": "/Shopping-Cart/static/media/Molten-GF7-Composite-Basketball.d533a0578376aa5d911e.jpeg",
+    "static/media/Michael-Jordan-Jersey.jpeg": "/Shopping-Cart/static/media/Michael-Jordan-Jersey.66caac099841e549ebab.jpeg",
+    "static/media/Wilson-Evolution-Indoor-Game-Basketball.jpeg": "/Shopping-Cart/static/media/Wilson-Evolution-Indoor-Game-Basketball.b5dda26d48fa09732f5b.jpeg",
+    "static/media/Basketball-Hoop-Set-For-Kids.jpeg": "/Shopping-Cart/static/media/Basketball-Hoop-Set-For-Kids.19a98494c19356d1ec58.jpeg",
+    "static/media/Kobe-11-Elite-Last-Emperor.jpeg": "/Shopping-Cart/static/media/Kobe-11-Elite-Last-Emperor.11364e84e493f146b7e7.jpeg",
+    "static/media/Nike-Air-Jordan-Retro-4.jpeg": "/Shopping-Cart/static/media/Nike-Air-Jordan-Retro-4.d690d1355a88b195c5f3.jpeg",
+    "index.html": "/Shopping-Cart/index.html",
+    "main.f35c5423.css.map": "/Shopping-Cart/static/css/main.f35c5423.css.map",
+    "main.3feae586.js.map": "/Shopping-Cart/static/js/main.3feae586.js.map"
   },
   "entrypoints": [
     "static/css/main.f35c5423.css",
-    "static/js/main.3676dc49.js"
+    "static/js/main.3feae586.js"
   ]
 }
