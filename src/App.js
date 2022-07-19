@@ -180,7 +180,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/Shopping-Cart">
       <Header cartItems={itemsInCart}></Header>
       <Routes>
         <Route path="/" element={<Main />} />
