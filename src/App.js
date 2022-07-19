@@ -154,8 +154,13 @@ function App() {
     const itemId = parseInt(
       e.target.parentNode.childNodes[1].getAttribute("id")
     );
-    const itemInput = e.target.parentNode.childNodes[1];
-    console.log(itemInput);
+    const itemQuantity = parseInt(e.target.parentNode.childNodes[1].value - 1);
+    if (itemQuantity === 0) {
+      setCartItems((prevState) => {
+        const newState = prevState.filter((item) => item.id !== itemId);
+        return newState;
+      });
+    }
     setItems((prevState) => {
       const newState = [...prevState];
       newState.find((item) => item.id === itemId).quantityInCart--;
