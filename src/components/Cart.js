@@ -12,7 +12,9 @@ const Cart = (props) => {
   else
     return (
       <div className="shopping-bag">
-        <button className="close-btn">&times;</button>
+        <Link to="/shop" className="close-btn">
+          <button className="close-btn">&times;</button>
+        </Link>
         {props.itemsInCart.map((item) => (
           <CartItem
             key={item.id}

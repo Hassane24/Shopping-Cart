@@ -1,0 +1,49 @@
+.main {
+  min-height: 100%;
+}
+.background-img {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.background-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.laced-up > a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: ease-in-out 200ms;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.laced-up {
+  width: fit-content;
+  position: fixed;
+  top: 60%;
+  left: 2.5rem;
+  right: 0;
+  bottom: 100%;
+  transition: ease-in-out 200ms;
+}
+
+.laced-up:hover {
+  transform: scale(106%);
+  transition: ease-in-out 400ms;
+}
+
+.laced-up > a:hover {
+  font-size: 2.5rem;
+  transform: scale(106%);
+  transition: ease-in-out 400ms;
+}

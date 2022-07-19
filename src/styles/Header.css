@@ -1,8 +1,10 @@
 .header {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
   justify-content: space-between;
-  background-color: rgb(57, 155, 235);
   padding: 2.5rem;
 }
 
@@ -19,7 +21,8 @@
   font-size: 1.5rem;
 }
 
-.header > ul > li {
+.header > ul > li,
+.header > ul > li > span {
   padding: 1rem;
 }
 
@@ -28,12 +31,13 @@
 }
 
 .header > ul > li > a,
-.shop-name > a {
+.shop-name > a,
+.header > ul > li > span {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .header > ul > li > a:active,
 .shop-name > a:active {
-  color: black;
+  color: white;
 }
